@@ -19,8 +19,8 @@
 
 <style>
 #map {
-    width: 960px;
-    height:500px;
+    width: 100%;
+    height:80%;
 }
 </style>
 
@@ -33,116 +33,100 @@
 <script>
 
     var map = L.map('map',{
-    center: [-1.269211, 36.809943],
-    zoom: 10
+    center: [-1.3592, 36.9380],
+    zoom: 11.28
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-    var circle = L.circle([-1.264445,36.859511], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 50
-}).addTo(map);
-
+  
 var circlekibra = L.circle([-1.311662,36.78791], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 1543.209877
-}).addTo(map);
+    radius: 1148.93617
+}).addTo(map).bindPopup("Kibra:108 cases");
 var makadara = L.circle([-1.303997,36.858028], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 478.3950617
-}).addTo(map);
+    radius: 744.6808511
+}).addTo(map).bindPopup("Makadara:70 cases");
 var langata = L.circle([-1.352789,36.737188], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 594.1358025
-}).addTo(map);
+    radius: 1265.957447
+}).addTo(map).bindPopup("Lang'ata:119 cases" );
 var westlands = L.circle([-1.268468,36.811631], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 378.0864198
-}).addTo(map);
+    radius: 1563.829787
+}).addTo(map).bindPopup("Westlands:147 cases" );
 var dagorettiNorth = L.circle([-1.288098,36.728643], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 308.6419753
-}).addTo(map);
+}).addTo(map).bindPopup("DagorettiNorth:119 cases" );
 var mathare = L.circle([-1.2619,36.8585], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 308.6419753
-}).addTo(map);
+    radius: 148.9361702
+}).addTo(map).bindPopup("Mathare:14 cases" );
 var ruaraka = L.circle([-1.2439,36.88], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 262.345679
-}).addTo(map);
+    radius: 212.7659574
+}).addTo(map).bindPopup("Ruaraka: 20cases" );
 var emba_west = L.circle([-1.2845,36.8866], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 208.3333333
-}).addTo(map);
+    radius: 191.4893617
+}).addTo(map).bindPopup("Embakasi West:18 cases" );
 var kasarani = L.circle([-1.2254,36.8976], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 154.3209877
-}).addTo(map);
+    radius: 319.1489362
+}).addTo(map).bindPopup("Kasarani:30 cases" );
 var emba_central = L.circle([-1.2721,36.9112], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 100.308642
-}).addTo(map);
-var eastleigh = L.circle([-1.2734,36.8481], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 100.308642
-}).addTo(map);
+    radius: 191.4893617
+}).addTo(map).bindPopup("Embakasi Central:18cases" );
+
 var kamukunji = L.circle([-1.2848,36.8338], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 92.59259259
-}).addTo(map);
+    radius: 563.8297872
+}).addTo(map).bindPopup("Kamukunji:53 cases" );
 var starehe = L.circle([-1.2855,36.8223], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 77.16049383
-}).addTo(map);
-var kamukunji = L.circle([-1.2848,36.8338], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 69.44444444
-}).addTo(map);
-var umoja = L.circle([-1.2744,36.9057], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 46.2962963
-}).addTo(map);
+    radius: 393.6170213
+}).addTo(map).bindPopup("Starehe:37 cases" );
 var roysambu = L.circle([-1.2185,36.8869], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 23.14814815
-}).addTo(map);
+    radius: 159.5744681
+}).addTo(map).bindPopup("Roysambu:15cases" );
+
+function circleClick(e) {
+    var clickedCircle = e.target;
+
+  // do something, like:
+  clickedCircle.bindPopup("some content").openPopup();
+}
 </script>
 
 </body>
